@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+transformers
+torch
+pydantic
+trafilatura
+textblob
+lxml
+beautifulsoup4
+requests

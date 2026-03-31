@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+.env
+
+# Node
+node_modules/
+frontend/node_modules/
+dist/
+build/
+
+# VSCode
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Logs
+.log
+
+# IDEs
+.idea/
