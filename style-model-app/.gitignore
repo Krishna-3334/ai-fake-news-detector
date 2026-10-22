@@ -1,0 +1,29 @@
+# Secrets - never commit API keys
+.env
+.env.*
+!.env.example
+
+# Python / environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Large datasets (re-create with experiment3.ipynb from Fake.csv + True.csv)
+Fake.csv
+True.csv
+train.csv
+val.csv
+test.csv
+
+# Private coursework handouts
+*.pdf
+
+# Logs
+*.log

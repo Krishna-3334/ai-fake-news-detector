@@ -1,0 +1,123 @@
+{
+  "about": "Challenge test set for the fake news detector. Articles marked fictional=true were written for testing and describe events that did not happen (or misstate real ones). They must never be published or shared as news. 'expected' is the correct three-way category; 'acceptable' lists categories that are not wrong for that case (e.g. a fabricated claim may reasonably come out as unverified, but never as likely_real).",
+  "categories": ["likely_real", "likely_fake", "unverified"],
+  "cases": [
+    {
+      "id": "rbi_wallets_fabricated",
+      "type": "Fictional report imitating a reputable outlet (user-reported failure)",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "RBI directs banks to report inactive digital wallet balances by March 31",
+      "text": "MUMBAI (Reuters) - The Reserve Bank of India on Tuesday directed all scheduled commercial banks and prepaid payment instrument issuers to report balances held in digital wallets that have been inactive for more than 12 months, according to a circular seen by Reuters. Under the new rules, banks must submit quarterly reports of such dormant balances to the central bank, starting with the quarter ending March 31, and transfer balances unclaimed for three years to the Depositor Education and Awareness Fund. \"The move is aimed at improving transparency and protecting customers whose funds lie idle in forgotten accounts,\" an RBI spokesperson said. The circular, numbered RBI/2026-27/118, said wallet providers that failed to comply would face penalties of up to Rs 5 lakh per instance. Officials at two large private banks said they were studying the directions. Analysts said the measure would affect an estimated Rs 4,200 crore lying in inactive wallets across the country."
+    },
+    {
+      "id": "railways_free_travel",
+      "type": "Completely fabricated news",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "Indian Railways to make all train travel free for students from November 1",
+      "text": "NEW DELHI - Indian Railways will allow all school and college students to travel free of charge in every class of every train from November 1, the Railway Ministry announced on Monday. Railway Minister Ashwini Vaishnaw told reporters that students would only need to show a valid institution identity card at the station to receive a zero-fare ticket. The scheme is expected to cost the ministry about Rs 38,000 crore a year, which will be met from a new levy on air travel, he said. Officials said more than 9 crore students were expected to benefit in the first year."
+    },
+    {
+      "id": "apophis_impact",
+      "type": "Real background with a fabricated central claim",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake"],
+      "title": "NASA confirms asteroid Apophis will strike Earth in 2029",
+      "text": "NASA scientists have confirmed that the asteroid 99942 Apophis is on a collision course with Earth and will strike the planet on April 13, 2029, the agency said in a statement on Thursday. Apophis, discovered in 2004, is about 340 metres wide. According to the statement, new radar observations ruled out any chance of a near miss, and the impact zone is expected to lie in the Indian Ocean. NASA said it was coordinating with space agencies worldwide on evacuation planning for coastal regions."
+    },
+    {
+      "id": "chandrayaan3_genuine",
+      "type": "Genuine news with verifiable primary sources",
+      "fictional": false,
+      "expected": "likely_real",
+      "acceptable": ["likely_real"],
+      "title": "Chandrayaan-3 lander touches down near the Moon's south pole",
+      "text": "BENGALURU - India's Chandrayaan-3 mission landed its Vikram lander near the Moon's south pole on August 23, 2023, the Indian Space Research Organisation (ISRO) said, making India the fourth country to achieve a soft landing on the Moon and the first to land near its south polar region. The spacecraft was launched on July 14, 2023 from the Satish Dhawan Space Centre in Sriharikota aboard an LVM3 rocket. The lander carried the Pragyan rover, which was deployed to study the lunar surface. Prime Minister Narendra Modi watched the landing virtually from Johannesburg, where he was attending the BRICS summit."
+    },
+    {
+      "id": "upi_genuine",
+      "type": "Genuine news (background facts)",
+      "fictional": false,
+      "expected": "likely_real",
+      "acceptable": ["likely_real"],
+      "title": "How UPI became India's most popular way to pay",
+      "text": "The Unified Payments Interface (UPI) was launched in 2016 by the National Payments Corporation of India (NPCI), an organisation set up under the guidance of the Reserve Bank of India and the Indian Banks' Association. UPI lets users send money instantly between bank accounts using a mobile phone, a virtual payment address or a QR code. Payment apps such as PhonePe, Google Pay and Paytm run on top of UPI. NPCI publishes monthly UPI transaction statistics on its website."
+    },
+    {
+      "id": "chandrayaan3_fake_cost",
+      "type": "Real news containing one fabricated detail (invented figure)",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "Chandrayaan-3 lands near Moon's south pole",
+      "text": "BENGALURU - India's Chandrayaan-3 mission landed its Vikram lander near the Moon's south pole on August 23, 2023, the Indian Space Research Organisation (ISRO) said, making India the fourth country to achieve a soft landing on the Moon. The spacecraft was launched on July 14, 2023 from Sriharikota aboard an LVM3 rocket. ISRO chairman S. Somanath said the mission had cost Rs 61,500 crore, making it the most expensive scientific project in the country's history."
+    },
+    {
+      "id": "das_fake_quote",
+      "type": "Real official falsely quoted",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "RBI Governor backed crypto as legal tender, speech shows",
+      "text": "MUMBAI - Reserve Bank of India Governor Shaktikanta Das said in a speech in 2022 that private cryptocurrencies such as Bitcoin would be accepted as legal tender in India by 2023. \"Cryptocurrencies are the future of money and India will embrace them fully,\" Das said, adding that the central bank had no concerns about their impact on financial stability."
+    },
+    {
+      "id": "demonetisation_old_as_new",
+      "type": "Outdated information presented as current breaking news",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "BREAKING: Rs 500 and Rs 1,000 notes cease to be legal tender from midnight tonight",
+      "text": "In a televised address to the nation this evening, Prime Minister Narendra Modi announced that Rs 500 and Rs 1,000 currency notes will cease to be legal tender from midnight tonight. Citizens can deposit the old notes in banks and post offices over the coming weeks, the government said. The move is aimed at curbing black money, counterfeit currency and terror financing, the Prime Minister said. Banks will remain closed tomorrow to prepare for the changeover."
+    },
+    {
+      "id": "moon_misleading_headline",
+      "type": "Accurate facts with a misleading headline",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "Scientists confirm Earth is losing the Moon - it could be gone within our lifetimes",
+      "text": "Scientists using lasers bounced off reflectors left on the lunar surface by Apollo astronauts have measured that the Moon is moving away from Earth at about 3.8 centimetres per year. The drift is caused by tidal interactions between the Earth and the Moon, which also gradually lengthen the day on Earth. Over billions of years, this process has slowly widened the Moon's orbit."
+    },
+    {
+      "id": "onion_style_satire",
+      "type": "Satire",
+      "fictional": true,
+      "expected": "likely_fake",
+      "acceptable": ["likely_fake", "unverified"],
+      "title": "Nation's procrastinators announce mass protest, to be held at some point",
+      "text": "In a show of unity that organisers described as 'long overdue', the country's procrastinators on Monday announced plans for a nationwide protest march, which they said would take place 'definitely soon, maybe after the weekend'. The group's spokesperson said the protest would demand that all deadlines be abolished, but admitted the press release had been due last March. Placards will be painted tomorrow, or possibly the day after, organisers said."
+    },
+    {
+      "id": "metro_opinion",
+      "type": "Opinion article built on accurate facts",
+      "fictional": false,
+      "expected": "likely_real",
+      "acceptable": ["likely_real", "unverified"],
+      "title": "Opinion: Indian cities should build metro rail before more flyovers",
+      "text": "Delhi Metro began commercial operations in December 2002, and in the two decades since it has changed how millions of people move around the capital. Other cities, including Bengaluru, Chennai, Kolkata and Mumbai, have since opened metro lines of their own. In my view, state governments should prioritise mass transit over new flyovers: every flyover adds road space that quickly fills with more cars, while a metro line moves far more people per hour with less pollution. Cities that keep choosing flyovers will keep getting traffic jams."
+    },
+    {
+      "id": "warehouse_fire_breaking",
+      "type": "Breaking news with incomplete evidence",
+      "fictional": true,
+      "expected": "unverified",
+      "acceptable": ["unverified"],
+      "title": "Fire breaks out at warehouse complex in Bhiwandi, cause not yet known",
+      "text": "A fire broke out at a warehouse complex in Bhiwandi near Thane early on Tuesday morning, local officials said. Fire tenders were rushed to the spot and firefighting operations were under way, an official at the Bhiwandi fire station said. There were no immediate reports of injuries, and the cause of the fire was not yet known. Further details were awaited."
+    },
+    {
+      "id": "red_wine_conflicting",
+      "type": "Conflicting credible sources",
+      "fictional": true,
+      "expected": "unverified",
+      "acceptable": ["unverified", "likely_fake"],
+      "title": "A daily glass of red wine protects your heart, researchers say",
+      "text": "Drinking a glass of red wine every day can protect against heart disease, according to researchers who have studied the drinking habits of large groups of adults. Several observational studies over the past decades have reported lower rates of heart disease among moderate drinkers than among people who do not drink at all. Some scientists credit compounds such as resveratrol found in grape skins."
+    }
+  ]
+}

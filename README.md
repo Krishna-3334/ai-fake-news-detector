@@ -38,3 +38,12 @@ If you prefer Netlify or Vercel, link the `frontend/` folder in their UI — the
 License
 
 Add a license file if you want to make this explicit (MIT is a common choice).
+
+## Local app: style model + evidence-based fact-check
+
+`style-model-app/` holds a separate, self-contained local app: a TF-IDF + Linear SVM writing-style
+classifier (trained on the ISOT Fake/True dataset) combined with an evidence-based web fact-check
+(Groq or NVIDIA NIM). See `style-model-app/about_project.md` for the notebooks, metrics and checkpoints.
+
+To run it, copy `style-model-app/.env.example` to `.env`, add your key, then run `python app.py`
+inside that folder. The `.env` file is git-ignored; never commit API keys.

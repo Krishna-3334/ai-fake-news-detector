@@ -1,0 +1,202 @@
+{
+  "split": {
+    "raw_articles": 44898,
+    "after_cleaning": 38658,
+    "train": 27060,
+    "val": 5799,
+    "test": 5799,
+    "matches_saved_test_csv": true
+  },
+  "exact_duplicates": {
+    "test_in_train": 61,
+    "val_in_train": 51,
+    "test_in_val": 15,
+    "empty_after_cleaning": 5,
+    "duplicate_cleaned_texts_overall": 278
+  },
+  "near_duplicates_test_vs_train": {
+    ">= 0.99": 62,
+    ">= 0.95": 89,
+    ">= 0.9": 112,
+    ">= 0.8": 215
+  },
+  "test_metrics": {
+    "n": 5798,
+    "accuracy": 0.9839599862021386,
+    "precision_fake": 0.9880170081175106,
+    "recall_fake": 0.9763177998472116,
+    "f1_fake": 0.9821325648414986,
+    "roc_auc": 0.9981473206778423,
+    "pr_auc": 0.9979936793998682,
+    "false_positive_rate": 0.009748427672955974,
+    "false_negative_rate": 0.023682200152788387,
+    "confusion": {
+      "tn": 3149,
+      "fp": 31,
+      "fn": 62,
+      "tp": 2556
+    }
+  },
+  "test_metrics_without_near_duplicates": {
+    "n": 5686,
+    "accuracy": 0.9836440379880408,
+    "precision_fake": 0.9878574226400313,
+    "recall_fake": 0.9760061919504643,
+    "f1_fake": 0.9818960482772046,
+    "roc_auc": 0.9980982009010465,
+    "pr_auc": 0.9979611023363981,
+    "false_positive_rate": 0.009993552546744036,
+    "false_negative_rate": 0.023993808049535603,
+    "confusion": {
+      "tn": 3071,
+      "fp": 31,
+      "fn": 62,
+      "tp": 2522
+    }
+  },
+  "artefacts_percent_of_class": {
+    "contains '(Reuters)'": {
+      "real": 99.2,
+      "fake": 0.0
+    },
+    "starts with an all-caps dateline": {
+      "real": 84.7,
+      "fake": 0.0
+    },
+    "contains 'featured image'": {
+      "real": 0.0,
+      "fake": 46.7
+    },
+    "contains 'getty images'": {
+      "real": 0.0,
+      "fake": 22.6
+    },
+    "contains 'pic.twitter.com'": {
+      "real": 0.0,
+      "fake": 15.4
+    },
+    "contains 'said'": {
+      "real": 93.7,
+      "fake": 56.8
+    },
+    "title is mostly upper-case words": {
+      "real": 0.0,
+      "fake": 5.4
+    }
+  },
+  "subjects": {
+    "real": [
+      "politicsNews",
+      "worldnews"
+    ],
+    "fake": [
+      "Government News",
+      "News",
+      "US_News",
+      "left-news",
+      "politics"
+    ]
+  },
+  "subjects_overlap": [],
+  "date_range": {
+    "real": [
+      "2016-01-13",
+      "2017-12-31"
+    ],
+    "fake": [
+      "2015-03-31",
+      "2018-02-19"
+    ]
+  },
+  "unparseable_dates": 6,
+  "shortcut_first_12_words": {
+    "n": 5799,
+    "accuracy": 0.9434385238834282,
+    "precision_fake": 0.9327540612013601,
+    "recall_fake": 0.9427262313860252,
+    "f1_fake": 0.9377136346372958,
+    "roc_auc": 0.9863339024688957,
+    "pr_auc": 0.9828969810426836,
+    "false_positive_rate": 0.0559748427672956,
+    "false_negative_rate": 0.0572737686139748,
+    "confusion": {
+      "tn": 3002,
+      "fp": 178,
+      "fn": 150,
+      "tp": 2469
+    }
+  },
+  "ablation_without_said": {
+    "n": 5798,
+    "accuracy": 0.9777509486029665,
+    "precision_fake": 0.9621240252506499,
+    "recall_fake": 0.9896867838044309,
+    "f1_fake": 0.9757107889286387,
+    "roc_auc": 0.9975359268921976,
+    "pr_auc": 0.9972629144007393,
+    "false_positive_rate": 0.03207547169811321,
+    "false_negative_rate": 0.010313216195569137,
+    "confusion": {
+      "tn": 3078,
+      "fp": 102,
+      "fn": 27,
+      "tp": 2591
+    }
+  },
+  "calibration": {
+    "ui_sigmoid_2x_margin": {
+      "brier": 0.01863277744933252,
+      "ece": 0.05675974822913212
+    },
+    "platt_calibrated_cv5": {
+      "brier": 0.012065364598727176,
+      "ece": 0.0034291348056178983
+    }
+  },
+  "time_split": {
+    "cutoff": "2017-07-01",
+    "train_class_counts": {
+      "real": 8302,
+      "fake": 14763
+    },
+    "test_class_counts": {
+      "real": 12894,
+      "fake": 2693
+    },
+    "n": 15587,
+    "accuracy": 0.9394367100789119,
+    "precision_fake": 0.7466854724964739,
+    "recall_fake": 0.9829186780542146,
+    "f1_fake": 0.8486694453350433,
+    "roc_auc": 0.9946701289862652,
+    "pr_auc": 0.9834255384930176,
+    "false_positive_rate": 0.06964479602916085,
+    "false_negative_rate": 0.01708132194578537,
+    "confusion": {
+      "tn": 11996,
+      "fp": 898,
+      "fn": 46,
+      "tp": 2647
+    }
+  },
+  "topic_shift": {
+    "train_subjects": "real: politicsNews; fake: politics, left-news, Government News",
+    "test_subjects": "real: worldnews; fake: News, US_News, Middle-east",
+    "n": 19813,
+    "accuracy": 0.9360520870135769,
+    "precision_fake": 0.9215551181102363,
+    "recall_fake": 0.9522017695515103,
+    "f1_fake": 0.9366278197369079,
+    "roc_auc": 0.9851288461189642,
+    "pr_auc": 0.986505511344594,
+    "false_positive_rate": 0.07985971943887775,
+    "false_negative_rate": 0.04779823044848978,
+    "confusion": {
+      "tn": 9183,
+      "fp": 797,
+      "fn": 470,
+      "tp": 9363
+    }
+  },
+  "runtime_seconds": 26.5
+}
