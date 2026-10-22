@@ -1,0 +1,5 @@
+{
+  "functions": {
+    "detector.py": { "maxDuration": 60, "includeFiles": "{index.html,factcheck.py,final_pipeline.joblib}" }
+  }
+}

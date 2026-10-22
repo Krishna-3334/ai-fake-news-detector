@@ -47,3 +47,5 @@ classifier (trained on the ISOT Fake/True dataset) combined with an evidence-bas
 
 To run it, copy `style-model-app/.env.example` to `.env`, add your key, then run `python app.py`
 inside that folder. The `.env` file is git-ignored; never commit API keys.
+
+Live demo of the local app (Vercel): https://fake-news-detector-rho-ten.vercel.app

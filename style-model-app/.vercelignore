@@ -1,0 +1,10 @@
+checkpoints
+audit
+tests
+*.ipynb
+*.png
+*.md
+app.py
+final_pipeline_original.joblib
+model_*.joblib
+tfidf*.joblib

@@ -13,7 +13,7 @@ Pipeline:
       - unsupported claims are downgraded to unresolved;
       - verdict is computed by deterministic rules (see `aggregate`).
 """
-import concurrent.futures, datetime, hashlib, json, re
+import concurrent.futures, datetime, hashlib, json, os, re
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -146,6 +146,9 @@ def load_env():
             if line and not line.startswith("#") and "=" in line:
                 k, v = line.split("=", 1)
                 env[k.strip()] = v.strip().strip('"').strip("'")
+    for k in ("GROQ_API_KEY", "GROQ_MODEL", "GROQ_REASONING_EFFORT", "NVIDIA_API_KEY", "NVIDIA_MODEL"):
+        if os.environ.get(k) and not env.get(k):   # hosted deploys (Vercel) supply keys as environment variables
+            env[k] = os.environ[k]
     return env
 
 

@@ -1,0 +1,14 @@
+[project]
+name = "fake-news-detector"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "scikit-learn==1.9.1",
+    "numpy",
+    "scipy",
+    "joblib",
+    "groq==1.7.0",
+]
+
+[tool.vercel]
+entrypoint = "detector:Handler"
